@@ -26,3 +26,17 @@ type Diff =
       previousFileName?: string;
     }[]
   | undefined;
+
+type Auther = {
+  date: string;
+  email: string;
+  name: string;
+};
+
+type Commit = {
+  sha: string;
+  message: strning;
+  author: Auther;
+  committer: string;
+  parents: string;
+};

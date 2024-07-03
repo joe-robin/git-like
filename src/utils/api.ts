@@ -10,3 +10,14 @@ export async function getDiff(
   );
   return response.data;
 }
+
+export async function getCommit(
+  owner: string,
+  repository: string,
+  commitSHA: string
+) {
+  const response = await axios.get<Commit>(
+    `/api/repositories/${owner}/${repository}/commit/${commitSHA}`
+  );
+  return response.data;
+}

@@ -22,7 +22,6 @@ export async function GET(req: Request, { params }: { params: UrlParams }) {
       author,
       committer,
       parents,
-      res: res.data,
     });
   } catch (error) {
     if (error instanceof RequestError) {

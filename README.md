@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Project
 
-## Getting Started
+## Prerequisites
 
-First, run the development server:
+Ensure you have Node.js installed on your system. If you do not have Node.js installed, follow the instructions below:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Installing Node.js
+
+1. **Windows**:
+
+   - Download the Node.js installer from the [official Node.js website](https://nodejs.org/).
+   - Run the installer, follow the prompts, and ensure to include npm (Node Package Manager).
+
+2. **macOS**:
+
+   - Use Homebrew to install Node.js:
+     ```sh
+     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+     brew install node
+     ```
+
+3. **Linux**:
+
+   - Use the package manager for your distribution. For example, on Debian-based systems (like Ubuntu):
+
+     ```sh
+     sudo apt update
+     sudo apt install nodejs npm
+     ```
+
+   - Alternatively, you can use nvm (Node Version Manager) to install Node.js:
+     ```sh
+     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+     source ~/.bashrc
+     nvm install node
+     ```
+
+Verify the installation by running:
+
+```sh
+node -v
+npm -v
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cloning the Repository
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Open your terminal.
+2. Clone the repository using the command:
+   ```sh
+   git clone https://github.com/joe-robin/git-like
+   ```
+3. Navigate into the project directory:
+   ```sh
+   cd git-like
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installing Dependencies
 
-## Learn More
+Install the necessary packages by running:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Running the Development Server
 
-## Deploy on Vercel
+Start the development server with:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+
+## Usage Instructions
+
+**Viewing Commit Changes in Browser**
+
+This guide explains how to view the changes introduced in a specific Git commit using a browser.
+
+**1. Find the Commit on GitHub**
+
+Navigate to the desired commit on GitHub.
+
+**2. Copy User ID and Commit Hash**
+
+The URL for the commit will contain the user ID and commit hash, typically formatted like this:
+
+```sh
+https://github.com/username/repo/commit/abcdef1234567890
+
+```
+
+In this example, "username" is the user ID and "abcdef1234567890" is the commit hash. Copy both the username and commit hash together (username/repo/abcdef1234567890).
+
+**3. Construct the View URL**
+
+Append the copied user ID and commit hash to the following base URL:
+
+```sh
+http://localhost:3000/repositories/
+
+```
+
+For instance, if your copied data is "joe-robin/chat-app/commit/8cdc31fae18eafab3a53173778f7fffb9ef6aeb6", the complete URL would be:
+
+```sh
+http://localhost:3000/repositories/joe-robin/chat-app/commit/8cdc31fae18eafab3a53173778f7fffb9ef6aeb6
+
+```
+
+**4. View the Commit Details**
+
+Paste the constructed URL into your browser. This will display the details of the specific commit, including the changes introduced.

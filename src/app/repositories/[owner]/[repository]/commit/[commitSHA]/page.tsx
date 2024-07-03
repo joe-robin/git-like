@@ -12,6 +12,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'next/navigation';
 import { Fragment } from 'react';
 import { z } from 'zod';
+import Auther from './auther';
 
 export default function Page() {
   const params = useParams();
@@ -33,6 +34,7 @@ export default function Page() {
 
   return (
     <div className='bg-white pt-8'>
+      <Auther owner={owner} repository={repository} commitSHA={commitSHA} />
       {data?.map((item, idx) => {
         return (
           <Accordion key={idx} type='single' collapsible>

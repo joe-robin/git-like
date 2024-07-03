@@ -30,7 +30,6 @@ export async function GET(req: Request, { params }: { params: UrlParams }) {
       hunks: hunkGen(item.patch),
       fileNames: item.filename,
       previousFileName: item.previous_filename,
-      data: files,
     }));
 
     return Response.json(response);
