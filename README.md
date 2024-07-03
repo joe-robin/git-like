@@ -1,4 +1,4 @@
-# My Project
+# Git Diff
 
 ## Prerequisites
 
